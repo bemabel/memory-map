@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { Route } from 'react-router';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { Main, UserPage, Welcome } from './pages';
+import { ThemeProvider } from 'mineral-ui/themes';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <ThemeProvider>
+        <div className="App">
+          <BrowserRouter history={createBrowserHistory()} >
+            <Switch>
+              <Route path="/" exact component={Main} />
+              <Route path="/UserPage" exact component={UserPage} />
+              <Route path="/Welcome" exact component={Welcome} />
+            </Switch>
+          </BrowserRouter>
+        </div>
+      </ThemeProvider>
+    );
+  }
 }
 
 export default App;

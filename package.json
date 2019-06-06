@@ -3,9 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/is-prop-valid": "^0.7.3",
+    "@emotion/styled": "^10.0.11",
+    "@material-ui/core": "^4.0.2",
+    "@material-ui/icons": "^4.0.1",
+    "emotion-theming": "^10.0.10",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "leaflet": "1.5.1",
+    "mineral-ui": "^0.58.0",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-leaflet": "^2.3.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "semantic-ui-react": "^0.87.1"
   },
   "scripts": {
     "start": "react-scripts start",
