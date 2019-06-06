@@ -4,7 +4,7 @@ import {
   Container,
   Divider,
   Dropdown,
-  Grid,
+  
   Header,
   Icon,
   Image,
@@ -123,10 +123,9 @@ export default class StickyLayout extends Component {
         </style>
 
         <Container text style={{ marginTop: '2em' }}>
-          <Header as='h1'>Sticky Example</Header>
+          <Header as='h1'>Dasha Ponamaryova</Header>
           <p>
-            This example shows how to use lazy loaded images, a sticky menu, and a simple text
-            container
+          Lorem ipsum dolor sit amet, mei causae discere debitis no.
           </p>
         </Container>
 
@@ -145,14 +144,14 @@ export default class StickyLayout extends Component {
           >
             <Container text>
               <Menu.Item>
-                <Image size='mini' src='/logo.png' />
+                <Image size='mini' src='../static/logo.jpg' />
               </Menu.Item>
-              <Menu.Item header>Project Name</Menu.Item>
-              <Menu.Item as='a'>Blog</Menu.Item>
-              <Menu.Item as='a'>Articles</Menu.Item>
+              <Menu.Item header>Story Name</Menu.Item>
+              <Menu.Item as='a'>Place</Menu.Item>
+              <Menu.Item as='a'>People</Menu.Item>
 
               <Menu.Menu position='right'>
-                <Dropdown text='Dropdown' pointing className='link item'>
+                <Dropdown text='Edit' pointing className='link item'>
                   <Dropdown.Menu>
                     <Dropdown.Item>List Item</Dropdown.Item>
                     <Dropdown.Item>List Item</Dropdown.Item>
@@ -230,9 +229,9 @@ export default class StickyLayout extends Component {
 
         <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical>
           <Container textAlign='center'>
-            <Grid columns={4} divided stackable inverted>
+            {/* <Grid columns={4} divided stackable inverted>
               <Grid.Row>
-                {/* <Grid.Column>
+                <Grid.Column>
                   <Header inverted as='h4' content='Group 1' />
                   <List link inverted>
                     <List.Item as='a'>Link One</List.Item>
@@ -258,7 +257,7 @@ export default class StickyLayout extends Component {
                     <List.Item as='a'>Link Three</List.Item>
                     <List.Item as='a'>Link Four</List.Item>
                   </List>
-                </Grid.Column> */}
+                </Grid.Column>
                 <Grid.Column>
                   <Header inverted as='h4' content='Footer Header' />
                   <p>
@@ -267,7 +266,7 @@ export default class StickyLayout extends Component {
                   </p>
                 </Grid.Column>
               </Grid.Row>
-            </Grid>
+            </Grid> */}
             <Divider inverted section />
             <Image src='/logo.png' centered size='mini' />
             <List horizontal inverted divided link size='small'>

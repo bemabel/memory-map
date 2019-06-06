@@ -13,15 +13,15 @@ function CardAvatar() {
 
 class StoriesСontainer extends Component {
   render() {
-    const loremIpsum = "Hello"
+    const loremIpsum = "Lorem ipsum dolor sit amet, mei causae discere debitis no. Nec prima erant detraxit te. Sea ex labore recusabo efficiantur. Ad solum appetere mnesarchum ius. Id vim erat referrentur. Nusquam efficiendi mel no, eum ad nisl omittam conceptam, putent voluptatibus vis et. Diam melius ius ut.  "
     return (
       <>
-    
+
         <Card>
           <CardTitle
             avatar={CardAvatar}
-            subtitle="Card Subtitle">
-            Card Title
+            subtitle="User Name">
+            Story Title
             </CardTitle>
           <CardBlock>{loremIpsum}</CardBlock>
         </Card>

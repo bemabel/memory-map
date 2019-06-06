@@ -20,6 +20,8 @@ class Main extends Component {
                     paddingRight="5px">
                     <SidebarHeader />
                     <StoriesContainer />
+                    <StoriesContainer />
+                    <StoriesContainer />
 
                 </Box>
             </Flex>
