@@ -7,7 +7,8 @@ class SidebarHeader extends Component {
     render() {
         return (
             <Flex>
-                <Box width={3 / 4}>
+                <Box width={3 / 4}
+                marginBottom="50px">
                     <CustomizedInputBase />
                 </Box>
                 <Box width={1 / 4}>

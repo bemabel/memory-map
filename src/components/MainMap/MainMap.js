@@ -71,7 +71,7 @@ componentDidMount(){
         position={position}
         icon={myIcon}>
       <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
+        You are here!
       </Popup>
     </Marker> : ''
     }

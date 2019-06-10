@@ -18,7 +18,7 @@ class Main extends Component {
                 <Box width={1 / 4}
                     margin="0px"
                     paddingRight="5px">
-                    <SidebarHeader />
+                    <SidebarHeader  />
                     <StoriesContainer />
                     <StoriesContainer />
                     <StoriesContainer />

@@ -14,9 +14,9 @@ class App extends Component {
         <div className="App">
           <BrowserRouter history={createBrowserHistory()} >
             <Switch>
-              <Route path="/" exact component={Main} />
-              <Route path="/UserPage" exact component={UserPage} />
-              <Route path="/Welcome" exact component={Welcome} />
+              <Route path="/memorymap" exact component={Main} />
+              <Route path="/profile" exact component={UserPage} />
+              <Route path="/hellopage" exact component={Welcome} />
             </Switch>
           </BrowserRouter>
         </div>
