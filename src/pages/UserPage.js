@@ -4,7 +4,8 @@ import {
   Container,
   Divider,
   // Dropdown,
-  
+  Grid,
+
   Header,
   // Icon,
   Image,
@@ -12,9 +13,10 @@ import {
   Menu,
   Segment,
   Visibility,
-    // Button,
+  // Button,
 } from 'semantic-ui-react';
 import StoriesContainer from '../components/StoriesContainer';
+import CircularAvatar from '../components/Avatar/CircularAvatar';
 
 
 const menuStyle = {
@@ -112,13 +114,37 @@ export default class StickyLayout extends Component {
           }
         `}
         </style>
-
         <Container text style={{ marginTop: '2em' }}>
-          <Header as='h1'>Dasha Ponamaryova</Header>
-          <p>
-          a hopeless learner.
+          <Grid celled>
+            <Grid.Row>
+              <Grid.Column floated='left' width={6}>
+                <Header as='h1'>Dasha Ponamaryova</Header>
+                <p>
+                  a hopeless learner.
           </p>
+              </Grid.Column>
+              <Grid.Column floated='right' width={6}>
+                <CircularAvatar />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </Container>
+
+        {/* <Grid>
+          <Container text style={{ marginTop: '2em' }}>
+            <Grid.Row floated='left' width={6}>
+              <Header as='h1'>Dasha Ponamaryova</Header>
+              <p>
+                a hopeless learner.
+          </p>
+            </Grid.Row>
+            <Grid.Row floated='right' width={6}>
+              <CircularAvatar />
+
+            </Grid.Row>
+          </Container>
+        </Grid> */}
+
 
         {/* Attaching the top menu is a simple operation, we only switch `fixed` prop and add another style if it has
             gone beyond the scope of visibility
@@ -134,19 +160,19 @@ export default class StickyLayout extends Component {
             style={menuFixed ? fixedMenuStyle : menuStyle}
           >
             <Container text>
-              <Menu.Item>
+              {/* <Menu.Item>
                 <Image size='mini' src='../static/logo.jpg' />
-              </Menu.Item>
-              <Menu.Item header>Story Name</Menu.Item>
-              <Menu.Item as='a'>Place</Menu.Item>
-              <Menu.Item as='a'>People</Menu.Item>
+              </Menu.Item> */}
+              <Menu.Item header>MEMORYMAP</Menu.Item>
+              <Menu.Item as='a'>Profile</Menu.Item>
+              <Menu.Item as='a'>Likes</Menu.Item>
             </Container>
           </Menu>
         </Visibility>
-        
-       
+
+
         <Container text>
-        
+
           <StoriesContainer />
 
           <Visibility
@@ -181,7 +207,7 @@ export default class StickyLayout extends Component {
           </div> */}
 
           <StoriesContainer />
-  
+
         </Container>
 
         <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical>
