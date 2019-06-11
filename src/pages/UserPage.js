@@ -3,20 +3,20 @@ import React, { Component } from 'react';
 import {
   Container,
   Divider,
-  // Dropdown,
   Grid,
-
   Header,
-  // Icon,
   Image,
   List,
   Menu,
   Segment,
   Visibility,
-  // Button,
 } from 'semantic-ui-react';
 import StoriesContainer from '../components/StoriesContainer';
 import CircularAvatar from '../components/Avatar/CircularAvatar';
+import AddStory from '../components/AddStory/AddStory';
+import 
+  ContainerColor
+ from "../components/Layout/ContainerColor";
 
 
 const menuStyle = {
@@ -114,13 +114,15 @@ export default class StickyLayout extends Component {
           }
         `}
         </style>
+        
         <Container text style={{ marginTop: '2em' }}>
+        <ContainerColor>
           <Grid celled>
             <Grid.Row>
               <Grid.Column floated='left' width={6}>
-                <Header as='h1'>Dasha Ponamaryova</Header>
+                <Header as='h1'>Dora Explorer</Header>
                 <p>
-                  a hopeless learner.
+                  a hopeless learner
           </p>
               </Grid.Column>
               <Grid.Column floated='right' width={6}>
@@ -128,7 +130,9 @@ export default class StickyLayout extends Component {
               </Grid.Column>
             </Grid.Row>
           </Grid>
+          </ContainerColor>
         </Container>
+        
 
         {/* <Grid>
           <Container text style={{ marginTop: '2em' }}>
@@ -160,9 +164,9 @@ export default class StickyLayout extends Component {
             style={menuFixed ? fixedMenuStyle : menuStyle}
           >
             <Container text>
-              {/* <Menu.Item>
-                <Image size='mini' src='../static/logo.jpg' />
-              </Menu.Item> */}
+              <Menu.Item>
+                <Image size='mini' src={require('../static/images/dasha_profile.jpg')} />
+              </Menu.Item>
               <Menu.Item header>MEMORYMAP</Menu.Item>
               <Menu.Item as='a'>Profile</Menu.Item>
               <Menu.Item as='a'>Likes</Menu.Item>
@@ -172,7 +176,7 @@ export default class StickyLayout extends Component {
 
 
         <Container text>
-
+<AddStory />
           <StoriesContainer />
 
           <Visibility
@@ -210,48 +214,11 @@ export default class StickyLayout extends Component {
 
         </Container>
 
-        <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical>
+        <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em', background: '#300D4F', }} vertical>
           <Container textAlign='center'>
-            {/* <Grid columns={4} divided stackable inverted>
-              <Grid.Row>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 1' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 2' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 3' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Footer Header' />
-                  <p>
-                    Extra space for a call to action inside the footer that could help re-engage
-                    users.
-                  </p>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid> */}
-            <Divider inverted section />
-            <Image src='/logo.png' centered size='mini' />
+           
+            <Divider />
+            <Image src={require('../static/images/dasha_avatar.png')} centered size='mini' />
             <List horizontal inverted divided link size='small'>
               <List.Item as='a' href='#'>
                 Site Map

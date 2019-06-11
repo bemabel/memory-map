@@ -3,7 +3,7 @@ import './Login.scss';
 
 import FacebookLogin from 'react-facebook-login';
 
-import GoogleLogin from 'react-google-login';
+// import GoogleLogin from 'react-google-login';
 
 class Login extends Component {
 
@@ -13,9 +13,9 @@ class Login extends Component {
       console.log(response);
     }
 
-    const responseGoogle = (response) => {
-      console.log(response);
-    }
+    // const responseGoogle = (response) => {
+    //   console.log(response);
+    // }
 
     return (
       <div className="App">
@@ -30,12 +30,12 @@ class Login extends Component {
       <br />
 
 
-      <GoogleLogin
+      {/* <GoogleLogin
         clientId="889994872599-6eq3q0bfha05dtj25l1ffa929q3aq2qe.apps.googleusercontent.com" //CLIENTID NOT CREATED YET
         buttonText="LOGIN WITH GOOGLE"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
-      />
+      /> */}
 
       </div>
     );
