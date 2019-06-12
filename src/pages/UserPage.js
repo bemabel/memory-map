@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Divider,
@@ -17,6 +18,7 @@ import AddStory from '../components/AddStory/AddStory';
 import 
   ContainerColor
  from "../components/Layout/ContainerColor";
+ 
 
 
 const menuStyle = {
@@ -117,11 +119,11 @@ export default class StickyLayout extends Component {
         
         <Container text style={{ marginTop: '2em' }}>
         <ContainerColor>
-          <Grid celled>
-            <Grid.Row>
-              <Grid.Column floated='left' width={6}>
-                <Header as='h1'>Dora Explorer</Header>
-                <p>
+          <Grid >
+            <Grid.Row style={{margin: '40px'}}>
+              <Grid.Column floated='left' width={6} >
+                <Header as='h1' >Dora Explorer</Header>
+                <p padding="10px">
                   a hopeless learner
           </p>
               </Grid.Column>
@@ -167,7 +169,7 @@ export default class StickyLayout extends Component {
               <Menu.Item>
                 <Image size='mini' src={require('../static/images/dasha_profile.jpg')} />
               </Menu.Item>
-              <Menu.Item header>MEMORYMAP</Menu.Item>
+              <Link to="/memorymap"><Menu.Item header>MEMORYMAP</Menu.Item></Link>
               <Menu.Item as='a'>Profile</Menu.Item>
               <Menu.Item as='a'>Likes</Menu.Item>
             </Container>

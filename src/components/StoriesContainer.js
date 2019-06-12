@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Card, { CardTitle, CardBlock } from 'mineral-ui/Card';
-// import Card, { CardActions, CardBlock, CardDivider, CardFooter, CardImage, CardTitle } from 'mineral-ui/Card';
-// import Avatar from 'mineral-ui/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
+
+
 // import AvImg from "../static/icons/logo.jpg";
 // import AccountCircle from '@material-ui/icons/AccountCircle';
 
@@ -23,19 +23,43 @@ function CardAvatar() {
 
 class StoriesСontainer extends Component {
   render() {
-    const loremIpsum = "Lorem ipsum dolor sit amet, mei causae discere debitis no. Nec prima erant detraxit te. Sea ex labore recusabo efficiantur. Ad solum appetere mnesarchum ius. Id vim erat referrentur. Nusquam efficiendi mel no, eum ad nisl omittam conceptam, putent voluptatibus vis et. Diam melius ius ut.  "
+    const text1 = "Pretty much any movie can be 'based on a true story', but there are a select few that take real-life events and turn them into cinematic masterpieces. Whether you're looking for a tale of underdogs overcoming the odds, a peek behind the royal curtain, or a new perspective on some of history's darkest moments, these films take all of the facts and spin them into stories that will inspire, astound, and haunt long after you've finished watching.";
+    const text2 = "The morning I spotted Tony Gardener sitting among the tourists, spring was just arriving here in Venice. We’d completed our first full week outside in the piazza – a relief, let me tell you after all those stuffy hours performing form the back of the café, getting in the way of customers wanting to use the staircase. There was quite a breeze that morning, and our brand-new marquee was flapping all around us, but we were all feeling a little bit brighter and fresher, and I guess it showed in our music.";
+    const text3 = "“Given the fact that he is one of the only ones left who hasn’t found love, one would hope and assume there is an opportunity for him to have an iota of a chance at finding something,” Leech told Entertainment Weekly.";
+
     return (
       <>
           <Card
           background-color="#f9f9ff">
             <CardTitle
-              subtitle="User's Name">
-              {/* надо убрать имя пользователя в UserPage */}
-              {/* avatar={CardAvatar} */}
+              subtitle="@bemabylova">
+          <h2>Be or not to Be?</h2>
               <CardAvatar />
-              Story Title
+              Cosmopark
             </CardTitle>
-            <CardBlock>{loremIpsum}</CardBlock>
+            <CardBlock>{text1}</CardBlock>
+          </Card>
+
+          <Card
+          background-color="#f9f9ff">
+            <CardTitle
+              subtitle="@aidai_sultanova">
+          <h2>"Stories are not enough"</h2>
+              <CardAvatar />
+              Dubovyi Park
+            </CardTitle>
+            <CardBlock>{text2}</CardBlock>
+          </Card>
+
+          <Card
+          background-color="#f9f9ff">
+            <CardTitle
+              subtitle="@mairam.nuralieva">
+          <h2>Story of ine</h2>
+              <CardAvatar />
+              Leech Cafe
+            </CardTitle>
+            <CardBlock>{text3}</CardBlock>
           </Card>
       </>
     );

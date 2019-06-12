@@ -19,7 +19,7 @@ class App extends Component {
             <Switch>
               <Route path="/memorymap" exact component={Main} />
               <Route path="/profile" exact component={UserPage} />
-              <Route path="/hellopage" exact component={Welcome} />
+              <Route path="/" exact component={Welcome} />
             </Switch>
           </BrowserRouter>
         </div>
