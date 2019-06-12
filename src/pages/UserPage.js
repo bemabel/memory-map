@@ -169,7 +169,7 @@ export default class StickyLayout extends Component {
               <Menu.Item>
                 <Image size='mini' src={require('../static/images/dasha_profile.jpg')} />
               </Menu.Item>
-              <Link to="/memorymap"><Menu.Item header>MEMORYMAP</Menu.Item></Link>
+              <Link to="/memorymap"><Menu.Item header style={{paddingTop:"20px"}}>MEMORYMAP</Menu.Item></Link>
               <Menu.Item as='a'>Profile</Menu.Item>
               <Menu.Item as='a'>Likes</Menu.Item>
             </Container>
@@ -179,6 +179,7 @@ export default class StickyLayout extends Component {
 
         <Container text>
 <AddStory />
+<Divider />
           <StoriesContainer />
 
           <Visibility
@@ -219,7 +220,7 @@ export default class StickyLayout extends Component {
         <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em', background: '#300D4F', }} vertical>
           <Container textAlign='center'>
            
-            <Divider />
+          
             <Image src={require('../static/images/dasha_avatar.png')} centered size='mini' />
             <List horizontal inverted divided link size='small'>
               <List.Item as='a' href='#'>

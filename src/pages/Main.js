@@ -71,9 +71,12 @@ constructor(props){
                     >
                     
                     <SidebarHeader  />
+                    <h1  style={{
+                        marginLeft: "35px"
+                    }}>Recommended stories</h1>
                     
-                    <Link to="/profile"><Button>Sign Up</Button></Link>
                         <div>
+                        <Link to="/profile"><Button style={{backgroundColor: "#6754ae", color: "white", marginLeft: "130px", marginTop: "550px", position: "fixed"}}>Sign Up</Button></Link>
                             { this.renderCards() }
                             <InfiniteLoader onVisited={ () => this.handleVisit() } />
                         </div>
