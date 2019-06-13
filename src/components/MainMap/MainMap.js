@@ -1,7 +1,4 @@
-import React, {Component} from 'react';
-// import { Button } from "./components";
-// import { withRouter } from 'react-router-dom';
-// import { UserPage } from './pages';
+import React, { Component } from 'react';
 import L from 'leaflet';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 
@@ -27,57 +24,57 @@ class MainMap extends Component {
     zoom: 2,
   }
 
-componentDidMount(){
-  navigator.geolocation.getCurrentPosition((position) => {
-    this.setState({
-      location: {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      },
-      haveUsersLocation: true,
-      zoom: 13,
-    });
-  }, () => {
-    console.log("uh oh... they didn't give us their location...");
-    fetch('https://ipapi.co/json')
-      .then(res => res.json())
-      .then(location => {
-        this.setState({
-          location: {
-            lat: location.latitude,
-            lng: location.longitude
-          },
-          haveUsersLocation: true,
-          zoom: 13
-        });
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.setState({
+        location: {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        },
+        haveUsersLocation: true,
+        zoom: 13,
       });
-  });
-}
+    }, () => {
+      console.log("uh oh... they didn't give us their location...");
+      fetch('https://ipapi.co/json')
+        .then(res => res.json())
+        .then(location => {
+          this.setState({
+            location: {
+              lat: location.latitude,
+              lng: location.longitude
+            },
+            haveUsersLocation: true,
+            zoom: 13
+          });
+        });
+    });
+  }
 
 
 
-  render() { 
+  render() {
     const position = [this.state.location.lat, this.state.location.lng];
-  return (
-    <Map className="map" center={position} zoom={this.state.zoom}>
-    <TileLayer
-      attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
-    {/* <Button onClick={\}/> */}
-    {
-      this.state.haveUsersLocation ?
-      <Marker 
-        position={position}
-        icon={myIcon}>
-      <Popup>
-        You are here!
-      </Popup>
-    </Marker> : ''
-    }
-    </Map>
-  );
-}
+    return (
+      <Map className="map" center={position} zoom={this.state.zoom}>
+        <TileLayer
+          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+
+        {
+          this.state.haveUsersLocation ?
+            <Marker
+              position={position}
+              icon={myIcon}>
+              <Popup>
+                You are here!
+              </Popup>
+            </Marker> : ''
+        }
+      </Map>
+    );
+  }
 }
 
 export default MainMap;

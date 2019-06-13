@@ -11,79 +11,85 @@ import Flex from 'mineral-ui/Flex';
 
 
 class Main extends Component {
-constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
-        items: []
+      items: []
     }
-}
-    componentDidMount() {
-      this.loadItems()
+  }
+  componentDidMount() {
+    this.loadItems()
+  }
+
+  loadItems() {
+    /* just simulating a load of more items from an api here */
+    setTimeout(() => {
+      let items = this.state.items.slice()
+      items = items.concat(this.getItems())
+      this.setState({ items: items })
+    }, 1000)
+  }
+
+  handleVisit() {
+    this.loadItems()
+  }
+
+  getItems() {
+    let items = []
+    for (var i = 0; i < 2; i++) {
+      items.push({ name: 'An item' })
     }
-    
-    loadItems() {
-      /* just simulating a load of more items from an api here */
-      setTimeout( () => {
-        let items = this.state.items.slice()
-        items = items.concat(this.getItems())
-        this.setState({ items: items })
-      }, 1000)
-    }
-    
-    handleVisit () {
-      this.loadItems()
-    }
-    
-    getItems() {
-      let items = []
-      for(var i = 0; i < 2; i++) {
-        items.push({ name: 'An item' })
-      }
-      return items
-    }
-    
-    renderCards() {
-      const { items } = this.state
-      const cards = items.map((item, i) => {
-        return (
-          <StoriesContainer />
-        )
-      })
-      return cards
-    }
+    return items
+  }
+
+  renderCards() {
+    const { items } = this.state
+    const cards = items.map((item, i) => {
+      return (
+        <StoriesContainer />
+      )
+    })
+    return cards
+  }
 
 
-    render() {
-        return (
-            <Flex height="100%">
-                <Box width={3 / 4}
-                    margin="0px"
-                    position="fixed">
-                    <MainMap />
-                </Box>
-                <Box width={1 / 4}
-                    margin="0px"
-                    paddingRight="5px"
-                    height="100%"
-                    style={{
-                        overflowY: "scroll"
-                    }}
-                    >
-                    
-                    <SidebarHeader  />
-                    <h1  style={{
-                        marginLeft: "35px"
-                    }}>Recommended stories</h1>
-                    
-                        <div>
-                        <Link to="/profile"><Button style={{backgroundColor: "#6754ae", color: "white", marginLeft: "130px", marginTop: "550px", position: "fixed"}}>Sign Up</Button></Link>
-                            { this.renderCards() }
-                            <InfiniteLoader onVisited={ () => this.handleVisit() } />
-                        </div>
-                </Box>
-            </Flex>
-        )
-    }
+  render() {
+    return (
+      <Flex height="100%">
+        <Box width={3 / 4}
+          margin="0px"
+          position="fixed">
+          <MainMap />
+        </Box>
+        <Box width={1 / 4}
+          margin="0px"
+          paddingRight="5px"
+          height="100%"
+          style={{
+            overflowY: "scroll"
+          }}
+        >
+
+          <SidebarHeader />
+          <h1 style={{
+            marginLeft: "35px"
+          }}>Recommended stories</h1>
+
+          <div>
+            <Link to="/profile"><Button style={{
+              backgroundColor: "#6754ae",
+              color: "white",
+              marginLeft: "130px",
+              marginTop: "550px",
+              position: "fixed"
+            }}>Sign Up</Button></Link>
+            {this.renderCards()}
+            <InfiniteLoader onVisited={() => this.handleVisit()} />
+          </div>
+        </Box>
+      </Flex>
+    )
+  }
 }
 
 export default Main

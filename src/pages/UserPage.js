@@ -15,10 +15,7 @@ import {
 import StoriesContainer from '../components/StoriesContainer';
 import CircularAvatar from '../components/Avatar/CircularAvatar';
 import AddStory from '../components/AddStory/AddStory';
-import 
-  ContainerColor
- from "../components/Layout/ContainerColor";
- 
+import ContainerColor from "../components/Layout/ContainerColor";
 
 
 const menuStyle = {
@@ -41,44 +38,7 @@ const overlayStyle = {
   margin: '0em 3em 1em 0em',
 }
 
-// const fixedOverlayStyle = {
-//   ...overlayStyle,
-//   position: 'fixed',
-//   top: '80px',
-//   zIndex: 10,
-// }
 
-// const overlayMenuStyle = {
-//   position: 'relative',
-//   left: 0,
-//   transition: 'left 0.5s ease',
-// }
-
-// const fixedOverlayMenuStyle = {
-//   ...overlayMenuStyle,
-//   left: '800px',
-// }
-
-// const LeftImage = () => (
-//   <Image
-//     floated='left'
-//     size='medium'
-//     src='/images/wireframe/square-image.png'
-//     style={{ margin: '2em 2em 2em -4em' }}
-//   />
-// )
-
-
-
-// const Paragraph = () => (
-//   <p>
-//     {[
-//       'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ',
-//       'tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas ',
-//       'semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ',
-//     ].join('')}
-//   </p>
-// )
 
 export default class StickyLayout extends Component {
   state = {
@@ -107,54 +67,24 @@ export default class StickyLayout extends Component {
 
     return (
       <div>
-        {/* Heads up, style below isn't necessary for correct work of example, simply our docs defines other
-            background color.
-          */}
-        <style>{`
-          html, body {
-            background: #fff;
-          }
-        `}
-        </style>
-        
         <Container text style={{ marginTop: '2em' }}>
-        <ContainerColor>
-          <Grid >
-            <Grid.Row style={{margin: '40px'}}>
-              <Grid.Column floated='left' width={6} >
-                <Header as='h1' >Dora Explorer</Header>
-                <p padding="10px">
-                  a hopeless learner
-          </p>
-              </Grid.Column>
-              <Grid.Column floated='right' width={6}>
-                <CircularAvatar />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
+          <ContainerColor>
+            <Grid >
+              <Grid.Row style={{ margin: '40px' }}>
+                <Grid.Column floated='left' width={6} >
+                  <Header as='h1' >Dora Explorer</Header>
+                  <p padding="10px">
+                    a hopeless learner
+                  </p>
+                </Grid.Column>
+                <Grid.Column floated='right' width={6}>
+                  <CircularAvatar />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </ContainerColor>
         </Container>
-        
 
-        {/* <Grid>
-          <Container text style={{ marginTop: '2em' }}>
-            <Grid.Row floated='left' width={6}>
-              <Header as='h1'>Dasha Ponamaryova</Header>
-              <p>
-                a hopeless learner.
-          </p>
-            </Grid.Row>
-            <Grid.Row floated='right' width={6}>
-              <CircularAvatar />
-
-            </Grid.Row>
-          </Container>
-        </Grid> */}
-
-
-        {/* Attaching the top menu is a simple operation, we only switch `fixed` prop and add another style if it has
-            gone beyond the scope of visibility
-          */}
         <Visibility
           onBottomPassed={this.stickTopMenu}
           onBottomVisible={this.unStickTopMenu}
@@ -169,7 +99,7 @@ export default class StickyLayout extends Component {
               <Menu.Item>
                 <Image size='mini' src={require('../static/images/dasha_profile.jpg')} />
               </Menu.Item>
-              <Link to="/memorymap"><Menu.Item header style={{paddingTop:"20px"}}>MEMORYMAP</Menu.Item></Link>
+              <Link to="/memorymap"><Menu.Item header style={{ paddingTop: "20px" }}>MEMORYMAP</Menu.Item></Link>
               <Menu.Item as='a'>Profile</Menu.Item>
               <Menu.Item as='a'>Likes</Menu.Item>
             </Container>
@@ -178,8 +108,8 @@ export default class StickyLayout extends Component {
 
 
         <Container text>
-<AddStory />
-<Divider />
+          <AddStory />
+          <Divider />
           <StoriesContainer />
 
           <Visibility
@@ -189,7 +119,7 @@ export default class StickyLayout extends Component {
             onTopVisible={this.unStickOverlay}
             style={overlayFixed ? { ...overlayStyle, ...overlayRect } : {}}
           />
-
+          {/* //unrealised sharing items */}
           {/* <div ref={this.handleOverlayRef} style={overlayFixed ? fixedOverlayStyle : overlayStyle}>
             <Menu
               icon='labeled'
@@ -214,13 +144,10 @@ export default class StickyLayout extends Component {
           </div> */}
 
           <StoriesContainer />
-
         </Container>
 
         <Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em', background: '#300D4F', }} vertical>
           <Container textAlign='center'>
-           
-          
             <Image src={require('../static/images/dasha_avatar.png')} centered size='mini' />
             <List horizontal inverted divided link size='small'>
               <List.Item as='a' href='#'>

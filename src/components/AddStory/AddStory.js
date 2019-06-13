@@ -8,6 +8,7 @@ import {
   Segment
 } from "semantic-ui-react";
 
+
 class AddStory extends React.Component {
   state = { value: "" };
 
@@ -15,7 +16,6 @@ class AddStory extends React.Component {
     return (
       <Container>
         <Divider hidden />
-       
 
         <Segment>
           <Header as="h3">
@@ -38,7 +38,6 @@ class AddStory extends React.Component {
           </Form>
         </Segment>
 
-       
       </Container>
     );
   }

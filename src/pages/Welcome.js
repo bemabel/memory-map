@@ -3,14 +3,11 @@ import EarthGif from '../components/EarthGif/EarthGif';
 
 // import Login from '../components/Login/Login';
 
-
-
-
 class Welcome extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <>
-            <EarthGif />            
+                <EarthGif />
             </>
         )
     }
