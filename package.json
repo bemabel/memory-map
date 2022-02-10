@@ -14,7 +14,7 @@
     "eslint-plugin-react": "^7.13.0",
     "leaflet": "1.5.1",
     "mineral-ui": "^0.58.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-facebook-login": "^4.1.1",
